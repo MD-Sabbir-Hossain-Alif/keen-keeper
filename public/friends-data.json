@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Arif Hossain",
+        "picture": "https://i.ibb.co.com/TBcqxNyk/male1.jpg",
+        "email": "arif.hossain@gmail.com",
+        "days_since_contact": 12,
+        "status": "Overdue",
+        "tags": ["close friend"],
+        "bio": "Met in university in Dhaka. Love hiking and tea stalls.",
+        "goal": 14,
+        "next_due_date": "2025-07-20"
+    },
+    {
+        "id": 2,
+        "name": "Nusrat Sultana",
+        "picture": "https://i.ibb.co.com/ZRXz8y7j/female1.jpg",
+        "email": "nusrat.sultana@yahoo.com",
+        "days_since_contact": 3,
+        "status": "On-Track",
+        "tags": ["work", "marketing"],
+        "bio": "Worked together at a marketing agency in Gulshan.",
+        "goal": 10,
+        "next_due_date": "2025-07-25"
+    },
+    {
+        "id": 3,
+        "name": "Tanvir Hasan",
+        "picture": "https://i.ibb.co.com/vvHzH47N/male2.jpg",
+        "email": "tanvir.hasan@outlook.com",
+        "days_since_contact": 20,
+        "status": "Almost Due",
+        "tags": ["friend"],
+        "bio": "Gym partner from local fitness center.",
+        "goal": 7,
+        "next_due_date": "2025-07-18"
+    },
+    {
+        "id": 4,
+        "name": "Farzana Rahman",
+        "picture": "https://i.ibb.co.com/PzZc6vHd/female2.jpg",
+        "email": "farzana.rahman@gmail.com",
+        "days_since_contact": 5,
+        "status": "On-Track",
+        "tags": ["family", "cousin"],
+        "bio": "Cousin living in Chattogram. Visit during Eid holidays.",
+        "goal": 15,
+        "next_due_date": "2025-07-30"
+    },
+    {
+        "id": 5,
+        "name": "Mahmudul Islam",
+        "picture": "https://i.ibb.co.com/9HpHMbyt/male3.jpg",
+        "email": "mahmudul.islam@hotmail.com",
+        "days_since_contact": 30,
+        "status": "Overdue",
+        "tags": ["business", "client"],
+        "bio": "Client from freelance web development project.",
+        "goal": 14,
+        "next_due_date": "2025-07-10"
+    },
+    {
+        "id": 6,
+        "name": "Jannatul Ferdous",
+        "picture": "https://i.ibb.co.com/spXtBG1R/female3.jpg",
+        "email": "jannatul.ferdous@gmail.com",
+        "days_since_contact": 1,
+        "status": "On-Track",
+        "tags": ["friend"],
+        "bio": "School friend. Chat regularly on WhatsApp.",
+        "goal": 7,
+        "next_due_date": "2025-07-28"
+    },
+    {
+        "id": 7,
+        "name": "Rakib Ahmed",
+        "picture": "https://i.ibb.co.com/7tgZWkM7/male4.jpg",
+        "email": "rakib.ahmed@gmail.com",
+        "days_since_contact": 9,
+        "status": "On-Track",
+        "tags": ["startup", "mentor"],
+        "bio": "Mentor from a local startup accelerator program.",
+        "goal": 10,
+        "next_due_date": "2025-07-22"
+    },
+    {
+        "id": 8,
+        "name": "Sumaiya Akter",
+        "picture": "https://i.ibb.co.com/sv1L6wdg/female4.jpg",
+        "email": "sumaiya.akter@yahoo.com",
+        "days_since_contact": 16,
+        "status": "Almost Due",
+        "tags": ["classmate"],
+        "bio": "Studied computer science together at university.",
+        "goal": 14,
+        "next_due_date": "2025-07-19"
+    },
+    {
+        "id": 9,
+        "name": "Imran Kabir",
+        "picture": "https://i.ibb.co.com/nNfH2JXg/male5.jpg",
+        "email": "imran.kabir@gmail.com",
+        "days_since_contact": 6,
+        "status": "On-Track",
+        "tags": ["friend"],
+        "bio": "Met during a Sylhet trip. Stay connected online.",
+        "goal": 12,
+        "next_due_date": "2025-07-27"
+    },
+    {
+        "id": 10,
+        "name": "Tania Chowdhury",
+        "picture": "https://i.ibb.co.com/Z6knhKqN/female5.jpg",
+        "email": "tania.chowdhury@outlook.com",
+        "days_since_contact": 11,
+        "status": "Overdue",
+        "tags": ["neighbor"],
+        "bio": "Former neighbor. Occasionally meet during visits home.",
+        "goal": 14,
+        "next_due_date": "2025-07-21"
+    }
+]

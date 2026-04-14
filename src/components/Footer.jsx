@@ -7,7 +7,7 @@ import Twitter from "../assets/twitter.png";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#244D3F] pt-20 pb-7.5 fixed bottom-0 w-full text-white">
+        <footer className="bg-[#244D3F] pt-20 pb-7.5 w-full text-white">
             <div className="max-w-6xl mx-auto">
                 <div className="flex flex-col justify-center items-center text-center">
                     <Image
@@ -16,7 +16,7 @@ const Footer = () => {
                         width="412"
                         height="auto"
                     ></Image>
-                    <p className="opacity-80">
+                    <p className="opacity-80 mt-4">
                         Your personal shelf of meaningful connections. Browse,
                         tend, and nurture the relationships that matter most.
                     </p>

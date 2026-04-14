@@ -1,7 +1,11 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa";
+import FriendsCard from "./FriendsCard";
 
-const Main = () => {
+const Main = async () => {
+    const res = await fetch("http://localhost:3000/friends-data.json");
+    const data = await res.json();
+    // console.log(data);
     return (
         <main className="max-w-6xl w-full mx-auto">
             {/* banner section  */}
@@ -58,8 +62,18 @@ const Main = () => {
                     </div>
                 </div>
             </section>
+            <hr className="mb-10 border-[#E9E9E9]" />
             {/* friends card section */}
-            <section></section>
+            <section>
+                <h3 className="text-2xl text-[#1F2937] font-semibold mb-4">
+                    Your Friend
+                </h3>
+                <div className="grid grid-cols-4 gap-6 mb-20">
+                    {data.map((card) => (
+                        <FriendsCard key={card.id} card={card} />
+                    ))}
+                </div>
+            </section>
         </main>
     );
 };
