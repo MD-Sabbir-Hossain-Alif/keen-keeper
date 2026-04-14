@@ -28,7 +28,7 @@ const Main = async () => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 my-10 text-center">
                     <div className="p-4 sm:p-6 md-p-8 bg-white border border-white shadow">
                         <h2 className="text-[#244D3F] text-2xl font-semibold sm:text-[2rem]">
-                            0
+                            {data.length}
                         </h2>
                         <p className="text-[#64748B] text-base sm:text-lg">
                             Total Friends

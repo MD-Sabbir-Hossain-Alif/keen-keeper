@@ -1,21 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const FriendsCard = ({ card }) => {
     // console.log(card);
-    const {
-        name,
-        picture,
-        email,
-        days_since_contact,
-        status,
-        tags,
-        bio,
-        goal,
-        next_due_date,
-    } = card;
+    const { id, name, picture, days_since_contact, status, tags } = card;
     return (
-        <div className="card bg-white shadow-sm p-6">
+        <Link href={`/${id}`} className="card bg-white shadow-sm p-6">
             <figure>
                 <div className="avatar">
                     <div className="w-20 rounded-full">
@@ -50,7 +41,7 @@ const FriendsCard = ({ card }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

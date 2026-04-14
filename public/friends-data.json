@@ -9,7 +9,7 @@
         "tags": ["close friend"],
         "bio": "Met in university in Dhaka. Love hiking and tea stalls.",
         "goal": 14,
-        "next_due_date": "2025-07-20"
+        "next_due_date": "May 05, 2026"
     },
     {
         "id": 2,
@@ -21,7 +21,7 @@
         "tags": ["work", "marketing"],
         "bio": "Worked together at a marketing agency in Gulshan.",
         "goal": 10,
-        "next_due_date": "2025-07-25"
+        "next_due_date": "Jun 12, 2026"
     },
     {
         "id": 3,
@@ -33,7 +33,7 @@
         "tags": ["friend"],
         "bio": "Gym partner from local fitness center.",
         "goal": 7,
-        "next_due_date": "2025-07-18"
+        "next_due_date": "Jul 01, 2026"
     },
     {
         "id": 4,
@@ -45,7 +45,7 @@
         "tags": ["family", "cousin"],
         "bio": "Cousin living in Chattogram. Visit during Eid holidays.",
         "goal": 15,
-        "next_due_date": "2025-07-30"
+        "next_due_date": "Aug 18, 2026"
     },
     {
         "id": 5,
@@ -57,7 +57,7 @@
         "tags": ["business", "client"],
         "bio": "Client from freelance web development project.",
         "goal": 14,
-        "next_due_date": "2025-07-10"
+        "next_due_date": "Sep 09, 2026"
     },
     {
         "id": 6,
@@ -69,7 +69,7 @@
         "tags": ["friend"],
         "bio": "School friend. Chat regularly on WhatsApp.",
         "goal": 7,
-        "next_due_date": "2025-07-28"
+        "next_due_date": "Oct 03, 2026"
     },
     {
         "id": 7,
@@ -81,7 +81,7 @@
         "tags": ["startup", "mentor"],
         "bio": "Mentor from a local startup accelerator program.",
         "goal": 10,
-        "next_due_date": "2025-07-22"
+        "next_due_date": "Nov 14, 2026"
     },
     {
         "id": 8,
@@ -93,7 +93,7 @@
         "tags": ["classmate"],
         "bio": "Studied computer science together at university.",
         "goal": 14,
-        "next_due_date": "2025-07-19"
+        "next_due_date": "Dec 07, 2026"
     },
     {
         "id": 9,
@@ -105,7 +105,7 @@
         "tags": ["friend"],
         "bio": "Met during a Sylhet trip. Stay connected online.",
         "goal": 12,
-        "next_due_date": "2025-07-27"
+        "next_due_date": "May 28, 2026"
     },
     {
         "id": 10,
@@ -117,6 +117,6 @@
         "tags": ["neighbor"],
         "bio": "Former neighbor. Occasionally meet during visits home.",
         "goal": 14,
-        "next_due_date": "2025-07-21"
+        "next_due_date": "Jun 30, 2026"
     }
 ]
