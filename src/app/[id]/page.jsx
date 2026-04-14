@@ -3,7 +3,6 @@ import React from "react";
 import { BiMessageDots } from "react-icons/bi";
 import { LuHistory } from "react-icons/lu";
 import { PiPhoneCall, PiVideoCameraBold } from "react-icons/pi";
-import CallIcon from "../../assets/call.png";
 
 const DetailsPage = async ({ params }) => {
     const { id } = await params;
@@ -76,7 +75,7 @@ const DetailsPage = async ({ params }) => {
             {/* second item  */}
             <div className="flex flex-col col-span-2 gap-6">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
-                    <div className="py-4 sm:py-6 md:py-8 px-2 sm:px-3 md:px-4 bg-white border border-white shadow">
+                    <div className="py-4 sm:py-6 md:py-8 px-2 sm:px-3 md:px-4 bg-white border border-white shadow rounded-lg">
                         <h2 className="text-[#244D3F] text-2xl font-semibold sm:text-[2rem]">
                             {days_since_contact}
                         </h2>
@@ -85,7 +84,7 @@ const DetailsPage = async ({ params }) => {
                         </p>
                     </div>
 
-                    <div className="py-4 sm:py-6 md:py-8 px-2 sm:px-3 md:px-4 bg-white border border-white shadow">
+                    <div className="py-4 sm:py-6 md:py-8 px-2 sm:px-3 md:px-4 bg-white border border-white shadow rounded-lg">
                         <h2 className="text-[#244D3F] text-2xl font-semibold sm:text-[2rem]">
                             {goal}
                         </h2>
@@ -94,7 +93,7 @@ const DetailsPage = async ({ params }) => {
                         </p>
                     </div>
 
-                    <div className="py-4 sm:py-6 md:py-8 px-2 sm:px-3 md:px-4 bg-white border border-white shadow">
+                    <div className="py-4 sm:py-6 md:py-8 px-2 sm:px-3 md:px-4 bg-white border border-white shadow rounded-lg">
                         <h2 className="text-[#244D3F] text-2xl font-semibold sm:text-[2rem]">
                             {next_due_date}
                         </h2>
@@ -104,7 +103,7 @@ const DetailsPage = async ({ params }) => {
                     </div>
                 </div>
                 {/* relationships */}
-                <div className="py-4 sm:py-6 md:py-8 px-2 sm:px-3 md:px-4 bg-white border border-white shadow">
+                <div className="py-4 sm:py-6 md:py-8 px-2 sm:px-3 md:px-4 bg-white border border-white shadow rounded-lg">
                     <div className="flex justify-between items-center">
                         <h2 className="text-[#244D3F] text-lg font-medium sm:text-xl">
                             Relationship Goal
@@ -119,7 +118,7 @@ const DetailsPage = async ({ params }) => {
                     </p>
                 </div>
                 {/* quick check in */}
-                <div className=" bg-white shadow border border-white p-6 ">
+                <div className=" bg-white shadow border border-white p-6 rounded-lg">
                     <h4 className="text-[#244D3F] text-xl font-medium mb-4">
                         Quick Check-In
                     </h4>
@@ -147,7 +146,7 @@ const DetailsPage = async ({ params }) => {
                     </div>
                 </div>
                 {/* recent interaction */}
-                <div className="p-6 space-y-4">
+                <div className="p-6 space-y-4 bg-white border border-white shadow rounded-lg">
                     <div className="flex justify-between item-center">
                         <h4 className="text-xl text-[#244D3F] font-medium">
                             Recent Interactions
