@@ -4,6 +4,7 @@ import { useMyContext } from "@/context/MyProvider";
 import React from "react";
 import { BiMessageDots } from "react-icons/bi";
 import { PiPhoneCall, PiVideoCameraBold } from "react-icons/pi";
+import { toast } from "react-toastify";
 
 const QuickCheck = ({ targetedData }) => {
     const { interactions, setInteractions } = useMyContext();
@@ -18,6 +19,7 @@ const QuickCheck = ({ targetedData }) => {
         };
 
         setInteractions([...interactions, data]);
+        toast.success(`${InteractionType} with ${targetedData.name}`);
     };
 
     // console.log("All Interactions:", interactions);
