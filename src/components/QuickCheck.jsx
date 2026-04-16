@@ -18,7 +18,7 @@ const QuickCheck = ({ targetedData }) => {
             createdAt: new Date().toISOString(),
         };
 
-        setInteractions([...interactions, data]);
+        setInteractions([data, ...interactions]);
         toast.success(`${InteractionType} with ${targetedData.name}`);
     };
 

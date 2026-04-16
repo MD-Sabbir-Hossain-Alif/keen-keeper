@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import CallIcon from "../assets/call.png";
 import TextIcon from "../assets/text.png";
 import VideoIcon from "../assets/video.png";
@@ -9,10 +9,21 @@ import { useMyContext } from "@/context/MyProvider";
 
 const Interactions = () => {
     const { interactions } = useMyContext();
-    console.log(interactions);
+    // console.log(interactions);
 
     return (
-        <div className="space-y-6">
+        <Suspense
+            fallback={
+                interactions.length && (
+                    <div className="bg-white border border-white text-center shadow-sm p-25">
+                        <p className="text-[#64748B] text-2xl">
+                            Data is Comming...
+                        </p>
+                    </div>
+                )
+            }
+            className="space-y-6"
+        >
             <select
                 defaultValue="Filter timeline"
                 className="select select-ghost bg-white border border-[#E9E9E9]"
@@ -20,9 +31,9 @@ const Interactions = () => {
                 <option disabled={true} className="hidden">
                     Filter timeline
                 </option>
-                <option>On-Track</option>
-                <option>Almost Due</option>
-                <option>Overdue</option>
+                <option>Call</option>
+                <option>Text</option>
+                <option>Video</option>
             </select>
 
             <ul className="list rounded-box gap-6">
@@ -67,14 +78,24 @@ const Interactions = () => {
                             </p>
                         </div>
                         <div>
-                            <p className="btn bg-transparent rounded-3xl text-red-500 font-medium ">
+                            <p className="btn bg-transparent rounded-3xl text-[#64748B] hover:text-red-400 hover:border-red-400 font-medium ">
                                 Clear
                             </p>
                         </div>
                     </li>
                 ))}
             </ul>
-        </div>
+            {!interactions.length && (
+                <div className="bg-white border border-white shadow-sm p-30 text-center space-y-4 rounded-lg">
+                    <h2 className="text-5xl text-[#244D3F]">
+                        Timeline Not Available!
+                    </h2>
+                    <p className="text-[#64748B] text-2xl">
+                        Interact with someone to see the timeline
+                    </p>
+                </div>
+            )}
+        </Suspense>
     );
 };
 
