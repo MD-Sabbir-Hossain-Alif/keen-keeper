@@ -1,8 +1,11 @@
+import QuickCheck from "@/components/QuickCheck";
 import Image from "next/image";
 import React from "react";
 import { BiMessageDots } from "react-icons/bi";
+import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { LuHistory } from "react-icons/lu";
 import { PiPhoneCall, PiVideoCameraBold } from "react-icons/pi";
+import { RiArchiveLine, RiDeleteBin6Line } from "react-icons/ri";
 
 const DetailsPage = async ({ params }) => {
     const { id } = await params;
@@ -29,7 +32,7 @@ const DetailsPage = async ({ params }) => {
     return (
         <section className="max-w-6xl w-full mx-auto grid grid-cols-3 gap-6 my-20">
             {/* first-item profile */}
-            <div className="col-span-1">
+            <div className="col-span-1 space-y-4">
                 <div className="card bg-white shadow-sm p-6 ">
                     <figure>
                         <div className="avatar">
@@ -71,6 +74,22 @@ const DetailsPage = async ({ params }) => {
                         <p className="text-[#64748B]">Preferred: {email}</p>
                     </div>
                 </div>
+                <div className="space-y-2 text-center">
+                    <div className="card bg-white shadow-sm p-4 flex-row justify-center items-center gap-2 rounded">
+                        <HiOutlineBellSnooze className="font-bold" />
+                        <p className="font-medium text-[#1F2937]">
+                            Snooze 2 weeks
+                        </p>
+                    </div>
+                    <div className="card bg-white shadow-sm p-4 flex-row justify-center items-center gap-2 rounded">
+                        <RiArchiveLine className="font-bold" />
+                        <p className="font-medium text-[#1F2937]">Archive</p>
+                    </div>
+                    <div className="card bg-white shadow-sm p-4 flex-row justify-center items-center gap-2 rounded text-red-500">
+                        <RiDeleteBin6Line className="font-bold" />
+                        <p className="font-medium">Delete</p>
+                    </div>
+                </div>
             </div>
             {/* second item  */}
             <div className="flex flex-col col-span-2 gap-6">
@@ -93,7 +112,7 @@ const DetailsPage = async ({ params }) => {
                         </p>
                     </div>
 
-                    <div className="py-4 sm:py-6 md:py-8 px-2 sm:px-3 md:px-4 bg-white border border-white shadow rounded-lg">
+                    <div className="py-4 sm:py-6 md:py-8 px-2 bg-white border border-white shadow rounded-lg">
                         <h2 className="text-[#244D3F] text-2xl font-semibold sm:text-[2rem]">
                             {next_due_date}
                         </h2>
@@ -118,33 +137,7 @@ const DetailsPage = async ({ params }) => {
                     </p>
                 </div>
                 {/* quick check in */}
-                <div className=" bg-white shadow border border-white p-6 rounded-lg">
-                    <h4 className="text-[#244D3F] text-xl font-medium mb-4">
-                        Quick Check-In
-                    </h4>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
-                        <div className="py-2 sm:py-3 md:py-4 px-2 sm:px-3 md:px-4 bg-[#F8FAFC] text-[#1F2937] border border-[#E9E9E9] rounded-lg">
-                            <h2 className="text-2xl font-black sm:text-[2rem] flex justify-center items-center mb-2">
-                                <PiPhoneCall />
-                            </h2>
-                            <p className="text-base sm:text-lg">Call</p>
-                        </div>
-
-                        <div className="py-2 sm:py-3 md:py-4 px-2 sm:px-3 md:px-4 bg-[#F8FAFC] text-[#1F2937] border border-[#E9E9E9] rounded-lg">
-                            <h2 className="text-2xl font-semibold sm:text-[2rem] flex justify-center items-center mb-2">
-                                <BiMessageDots />
-                            </h2>
-                            <p className="text-base sm:text-lg">Text</p>
-                        </div>
-
-                        <div className="py-2 sm:py-3 md:py-4 px-2 sm:px-3 md:px-4 bg-[#F8FAFC] text-[#1F2937] border border-[#E9E9E9] rounded-lg">
-                            <h2 className="text-2xl font-semibold sm:text-[2rem] flex justify-center items-center mb-2">
-                                <PiVideoCameraBold />
-                            </h2>
-                            <p className="text-base sm:text-lg">Video</p>
-                        </div>
-                    </div>
-                </div>
+                <QuickCheck targetedData={targetedData}></QuickCheck>
                 {/* recent interaction */}
                 <div className="p-6 space-y-4 bg-white border border-white shadow rounded-lg">
                     <div className="flex justify-between item-center">
