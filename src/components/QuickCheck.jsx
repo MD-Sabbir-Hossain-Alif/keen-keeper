@@ -13,6 +13,7 @@ const QuickCheck = ({ targetedData }) => {
             id: targetedData.id,
             name: targetedData.name,
             action: InteractionType,
+            status: targetedData.status,
             createdAt: new Date().toISOString(),
         };
 
