@@ -10,7 +10,9 @@ import { RiArchiveLine, RiDeleteBin6Line } from "react-icons/ri";
 const DetailsPage = async ({ params }) => {
     const { id } = await params;
     // console.log(parseInt(id));
-    const res = await fetch("http://localhost:3000/friends-data.json");
+    const res = await fetch(
+        "https://keen-keeper-git-main-sabbirs-projects-cd770bda.vercel.app/friends-data.json",
+    );
     const data = await res.json();
     // console.log(data);
 
