@@ -10,12 +10,11 @@ import { RiArchiveLine, RiDeleteBin6Line } from "react-icons/ri";
 const DetailsPage = async ({ params }) => {
     const { id } = await params;
     // console.log(parseInt(id));
-    const res = await fetch(
-        "https://keen-keeper-iota-nine.vercel.app/friends-data.json",
-        {
-            cache: "no-cache",
-        },
-    );
+    const res = await fetch("http://localhost:3000/friends-data.json");
+    //  {"https://keen-keeper-iota-nine.vercel.app/friends-data.json",
+    //     {
+    //         cache: "no-cache",
+    //     },}
     const data = await res.json();
     // console.log(data);
 
@@ -42,7 +41,7 @@ const DetailsPage = async ({ params }) => {
                 </div>
             }
         >
-            <section className="max-w-6xl w-full mx-auto grid grid-cols-3 gap-6 my-20">
+            <section className="max-w-6xl w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 my-8 sm:my-12 md:my-16 lg:my-20 px-4">
                 {/* first-item profile */}
                 <div className="col-span-1 space-y-4">
                     <div className="card bg-white shadow-sm p-6 ">
@@ -106,31 +105,31 @@ const DetailsPage = async ({ params }) => {
                     </div>
                 </div>
                 {/* second item  */}
-                <div className="flex flex-col col-span-2 gap-6">
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
+                <div className="flex flex-col col-span-1 md:col-span-2 gap-6">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
                         <div className="py-4 sm:py-6 md:py-8 px-2 sm:px-3 md:px-4 bg-white border border-white shadow rounded-lg">
-                            <h2 className="text-[#244D3F] text-2xl font-semibold sm:text-[2rem]">
+                            <h2 className="text-[#244D3F] text-2xl font-semibold xl:text-[2rem]">
                                 {days_since_contact}
                             </h2>
-                            <p className="text-[#64748B] text-base sm:text-lg">
+                            <p className="text-[#64748B] text-base xl:text-lg">
                                 Days Since Contact
                             </p>
                         </div>
 
                         <div className="py-4 sm:py-6 md:py-8 px-2 sm:px-3 md:px-4 bg-white border border-white shadow rounded-lg">
-                            <h2 className="text-[#244D3F] text-2xl font-semibold sm:text-[2rem]">
+                            <h2 className="text-[#244D3F] text-2xl font-semibold xl:text-[2rem]">
                                 {goal}
                             </h2>
-                            <p className="text-[#64748B] text-base sm:text-lg">
+                            <p className="text-[#64748B] text-base xl:text-lg">
                                 Goal (Days)
                             </p>
                         </div>
 
                         <div className="py-4 sm:py-6 md:py-8 px-2 bg-white border border-white shadow rounded-lg">
-                            <h2 className="text-[#244D3F] text-2xl font-semibold sm:text-[2rem]">
+                            <h2 className="text-[#244D3F] text-2xl font-semibold xl:text-[2rem]">
                                 {next_due_date}
                             </h2>
-                            <p className="text-[#64748B] text-base sm:text-lg">
+                            <p className="text-[#64748B] text-base xl:text-lg">
                                 Next Due
                             </p>
                         </div>
@@ -153,7 +152,7 @@ const DetailsPage = async ({ params }) => {
                     {/* quick check in */}
                     <QuickCheck targetedData={targetedData}></QuickCheck>
                     {/* recent interaction */}
-                    <div className="p-6 space-y-4 bg-white border border-white shadow rounded-lg">
+                    {/* <div className="p-6 space-y-4 bg-white border border-white shadow rounded-lg">
                         <div className="flex justify-between item-center">
                             <h4 className="text-xl text-[#244D3F] font-medium">
                                 Recent Interactions
@@ -166,13 +165,6 @@ const DetailsPage = async ({ params }) => {
                         <ul className="list bg-base-100 rounded-box shadow-md">
                             <li className="list-row items-center">
                                 <div>
-                                    {/* <Image
-                                    className="size-8"
-                                    src={CallIcon}
-                                    alt="call button icon"
-                                    width="32"
-                                    height="32"
-                                /> */}
                                     <PiPhoneCall className="size-8" />
                                 </div>
                                 <div>
@@ -188,7 +180,7 @@ const DetailsPage = async ({ params }) => {
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </Suspense>

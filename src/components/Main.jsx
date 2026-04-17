@@ -4,20 +4,20 @@ import FriendsCard from "./FriendsCard";
 import SummaryCards from "./SummaryCards";
 
 const Main = async () => {
-    const res = await fetch(
-        "https://keen-keeper-iota-nine.vercel.app/friends-data.json",
-        {
-            cache: "no-cache",
-        },
-    );
+    const res = await fetch("http://localhost:3000/friends-data.json");
+    //     "https://keen-keeper-iota-nine.vercel.app/friends-data.json",
+    //     {
+    //         cache: "no-cache",
+    //     },
+    // );
     const data = await res.json();
     // console.log(data);
     return (
-        <main className="max-w-6xl w-full mx-auto">
+        <main className="max-w-6xl w-full mx-auto my-8 sm:my-12 md:my-16 lg:my-20 p-4">
             {/* banner section  */}
             <section>
                 {/* hero section  */}
-                <div className="flex flex-col justify-center items-center mt-20">
+                <div className="flex flex-col justify-center items-center">
                     <h1 className="text-4xl sm:text-[2.63rem] md:text-5xl text-[#1F2937] font-bold mb-4 text-center">
                         Friends to keep close in your life
                     </h1>
@@ -46,7 +46,7 @@ const Main = async () => {
                     <h3 className="text-2xl text-[#1F2937] font-semibold mb-4">
                         Your Friend
                     </h3>
-                    <div className="grid grid-cols-4 gap-6 mb-20">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                         {data.map((card) => (
                             <FriendsCard key={card.id} card={card} />
                         ))}

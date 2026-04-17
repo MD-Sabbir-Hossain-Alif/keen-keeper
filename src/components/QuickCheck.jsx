@@ -29,7 +29,7 @@ const QuickCheck = ({ targetedData }) => {
             <h4 className="text-[#244D3F] text-xl font-medium mb-4">
                 Quick Check-In
             </h4>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-center">
                 <div
                     onClick={() => handleQuickCheckBtn("Call")}
                     className="py-2 sm:py-3 md:py-4 px-2 sm:px-3 md:px-4 bg-[#F8FAFC] text-[#1F2937] border border-[#E9E9E9] rounded-lg cursor-pointer hover:bg-[#e5e5e5] transition-all"

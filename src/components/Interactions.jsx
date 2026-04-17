@@ -86,11 +86,11 @@ const Interactions = () => {
                 ))}
             </ul>
             {!interactions.length && (
-                <div className="bg-white border border-white shadow-sm p-30 text-center space-y-4 rounded-lg">
-                    <h2 className="text-5xl text-[#244D3F]">
+                <div className="bg-white border border-white shadow-sm p-4 sm:p-12 md:p-20 lg:p-30 text-center space-y-4 rounded-lg">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#244D3F]">
                         Timeline Not Available!
                     </h2>
-                    <p className="text-[#64748B] text-2xl">
+                    <p className="text-[#64748B] text-base md:text-xl lg:text-2xl">
                         Interact with someone to see the timeline
                     </p>
                 </div>

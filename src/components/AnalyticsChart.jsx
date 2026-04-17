@@ -23,7 +23,7 @@ const AnalyticsChart = ({ isAnimationActive = true }) => {
     ];
 
     return (
-        <div className="bg-white border border-white shadow-sm rounded-lg p-8">
+        <div className="bg-white border border-white shadow-sm rounded-lg sm:p-4 md:p-6 lg:p-8">
             {interactions.length ? (
                 <>
                     <h1 className="text-xl font-medium text-[#244D3F] mb-6">
@@ -33,7 +33,7 @@ const AnalyticsChart = ({ isAnimationActive = true }) => {
                         <ResponsiveContainer
                             width="100%"
                             height={300}
-                            className="focus:border-none focus:active-none active:ring-0"
+                            className="focus:border-none focus:active-none active:ring-0 h-auto w-full"
                         >
                             <PieChart>
                                 <Pie
@@ -52,11 +52,11 @@ const AnalyticsChart = ({ isAnimationActive = true }) => {
                     </div>
                 </>
             ) : (
-                <div className=" p-22 text-center space-y-4">
-                    <h2 className="text-5xl text-[#244D3F]">
+                <div className="p-2 py-4 sm:py-none sm:p-8 md:p-14 lg:p-22 text-center space-y-4">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl text-[#244D3F]">
                         Stats Not Available!
                     </h2>
-                    <p className="text-[#64748B] text-2xl">
+                    <p className="text-[#64748B] text-base md:text-xl lg:text-2xl">
                         Interact with someone to see the stats
                     </p>
                 </div>
