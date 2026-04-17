@@ -6,6 +6,9 @@ import SummaryCards from "./SummaryCards";
 const Main = async () => {
     const res = await fetch(
         "https://keen-keeper-5zmtcwdz2-sabbirs-projects-cd770bda.vercel.app/friends-data.json",
+        {
+            cache: "no-store",
+        },
     );
     const data = await res.json();
     // console.log(data);
