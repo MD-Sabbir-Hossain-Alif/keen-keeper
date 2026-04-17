@@ -25,7 +25,7 @@ const QuickCheck = ({ targetedData }) => {
     // console.log("All Interactions:", interactions);
 
     return (
-        <div className=" bg-white shadow border border-white p-6 rounded-lg">
+        <div className=" bg-white shadow border border-white p-4 sm:p-5 md:p-6 rounded-lg">
             <h4 className="text-[#244D3F] text-xl font-medium mb-4">
                 Quick Check-In
             </h4>

@@ -23,10 +23,10 @@ const AnalyticsChart = ({ isAnimationActive = true }) => {
     ];
 
     return (
-        <div className="bg-white border border-white shadow-sm rounded-lg sm:p-4 md:p-6 lg:p-8">
+        <div className="bg-white border border-white shadow-sm rounded-lg p-2 sm:p-4 md:p-6 lg:p-8">
             {interactions.length ? (
                 <>
-                    <h1 className="text-xl font-medium text-[#244D3F] mb-6">
+                    <h1 className="text-xl font-medium text-[#244D3F] mb-4 md:mb-6">
                         By Interaction Type
                     </h1>
                     <div className="w-full min-w-0">

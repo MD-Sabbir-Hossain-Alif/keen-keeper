@@ -5,13 +5,14 @@ import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { RiArchiveLine, RiDeleteBin6Line } from "react-icons/ri";
 
 export const metadata = {
-    title: "Friends Details",
+    title: "Keen Keeper - Friend's Details",
     description: "Friends Details Page",
 };
 
 const DetailsPage = async ({ params }) => {
     const { id } = await params;
     // console.log(parseInt(id));
+
     // const res = await fetch("http://localhost:3000/friends-data.json");
     const res = await fetch(
         "https://keen-keeper-iota-nine.vercel.app/friends-data.json",
@@ -48,7 +49,7 @@ const DetailsPage = async ({ params }) => {
             <section className="max-w-6xl w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 my-8 sm:my-12 md:my-16 lg:my-20 px-4">
                 {/* first-item profile */}
                 <div className="col-span-1 space-y-4">
-                    <div className="card bg-white shadow-sm p-6 ">
+                    <div className="card bg-white shadow-sm p-4 sm:p-5 md:p-6">
                         <figure>
                             <div className="avatar">
                                 <div className="w-20 rounded-full">

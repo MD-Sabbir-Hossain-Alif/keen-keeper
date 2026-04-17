@@ -14,7 +14,7 @@ const Main = async () => {
     const data = await res.json();
     // console.log(data);
     return (
-        <main className="max-w-6xl w-full mx-auto my-8 sm:my-12 md:my-16 lg:my-20 p-4">
+        <main className="max-w-6xl w-full mx-auto my-8 sm:my-12 md:my-16 lg:my-20 px-4">
             {/* banner section  */}
             <section>
                 {/* hero section  */}

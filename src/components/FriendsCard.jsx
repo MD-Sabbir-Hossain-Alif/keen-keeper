@@ -8,7 +8,7 @@ const FriendsCard = ({ card }) => {
     return (
         <Link
             href={`/${id}`}
-            className="card bg-white shadow-sm p-6 hover:bg-gray-100 transition-all"
+            className="card bg-white shadow-sm p-4 sm:p-5 md:p-6 hover:bg-gray-100 transition-all"
         >
             <figure>
                 <div className="avatar">

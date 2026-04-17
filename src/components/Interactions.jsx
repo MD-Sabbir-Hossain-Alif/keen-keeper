@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense, useState } from "react";
+import React, { useState } from "react";
 import CallIcon from "../assets/call.png";
 import TextIcon from "../assets/text.png";
 import VideoIcon from "../assets/video.png";
@@ -20,18 +20,7 @@ const Interactions = () => {
     // console.log(filteredData);
 
     return (
-        <Suspense
-            fallback={
-                interactions.length && (
-                    <div className="bg-white border border-white text-center shadow-sm p-25">
-                        <p className="text-[#64748B] text-2xl">
-                            Data is Comming...
-                        </p>
-                    </div>
-                )
-            }
-            className="space-y-6"
-        >
+        <section className="space-y-4 md:space-y-6">
             <select
                 onChange={(e) => setFilter(e.target.value)}
                 defaultValue="Filter timeline"
@@ -45,7 +34,7 @@ const Interactions = () => {
                 <option value="Video">Video</option>
             </select>
 
-            <ul className="list rounded-box gap-6">
+            <ul className="list rounded-box gap-4 md:gap-6">
                 {filteredData.map((interaction, index) => (
                     <li
                         key={index}
@@ -53,7 +42,7 @@ const Interactions = () => {
                     >
                         <div>
                             <Image
-                                className="size-10"
+                                className=" size-6 sm:size-8 md:size-10"
                                 src={
                                     interaction.action === "Call"
                                         ? CallIcon
@@ -86,11 +75,11 @@ const Interactions = () => {
                                 })}
                             </p>
                         </div>
-                        <div>
+                        {/* <div>
                             <p className="btn bg-transparent rounded-3xl text-[#64748B] hover:text-red-400 hover:border-red-400 font-medium ">
                                 Clear
                             </p>
-                        </div>
+                        </div> */}
                     </li>
                 ))}
             </ul>
@@ -104,7 +93,7 @@ const Interactions = () => {
                     </p>
                 </div>
             )}
-        </Suspense>
+        </section>
     );
 };
 
