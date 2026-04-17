@@ -6,9 +6,9 @@ const GlobalError = ({ error, reset }) => {
     return (
         <div className="h-screen flex flex-col items-center justify-center">
             <h2 className="text-2xl md:text-4xl mb-4 md:mb-6 font-medium text-[#1F2937]">
-                404 - Page Not Found
+                404 - Page Not Found!
             </h2>
-            <Link href="/" className="btn btn-error">
+            <Link href="/" className="btn bg-[#244D3F] text-white">
                 Go Home
             </Link>
         </div>

@@ -1,20 +1,24 @@
 import QuickCheck from "@/components/QuickCheck";
 import Image from "next/image";
 import React, { Suspense } from "react";
-import { BiMessageDots } from "react-icons/bi";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
-import { LuHistory } from "react-icons/lu";
-import { PiPhoneCall, PiVideoCameraBold } from "react-icons/pi";
 import { RiArchiveLine, RiDeleteBin6Line } from "react-icons/ri";
+
+export const metadata = {
+    title: "Friends Details",
+    description: "Friends Details Page",
+};
 
 const DetailsPage = async ({ params }) => {
     const { id } = await params;
     // console.log(parseInt(id));
-    const res = await fetch("http://localhost:3000/friends-data.json");
-    //  {"https://keen-keeper-iota-nine.vercel.app/friends-data.json",
-    //     {
-    //         cache: "no-cache",
-    //     },}
+    // const res = await fetch("http://localhost:3000/friends-data.json");
+    const res = await fetch(
+        "https://keen-keeper-iota-nine.vercel.app/friends-data.json",
+        {
+            cache: "no-cache",
+        },
+    );
     const data = await res.json();
     // console.log(data);
 

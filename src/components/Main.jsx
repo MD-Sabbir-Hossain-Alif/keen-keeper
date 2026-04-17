@@ -4,12 +4,13 @@ import FriendsCard from "./FriendsCard";
 import SummaryCards from "./SummaryCards";
 
 const Main = async () => {
-    const res = await fetch("http://localhost:3000/friends-data.json");
-    //     "https://keen-keeper-iota-nine.vercel.app/friends-data.json",
-    //     {
-    //         cache: "no-cache",
-    //     },
-    // );
+    // const res = await fetch("http://localhost:3000/friends-data.json");
+    const res = await fetch(
+        "https://keen-keeper-iota-nine.vercel.app/friends-data.json",
+        {
+            cache: "no-cache",
+        },
+    );
     const data = await res.json();
     // console.log(data);
     return (

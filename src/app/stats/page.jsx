@@ -1,5 +1,10 @@
 import AnalyticsChart from "@/components/AnalyticsChart";
 
+export const metadata = {
+    title: "Stats",
+    description: "Stats Page",
+};
+
 const StatsPage = () => {
     return (
         <div className="max-w-6xl w-full mx-auto my-8 sm:my-12 md:my-16 lg:my-20 p-4">

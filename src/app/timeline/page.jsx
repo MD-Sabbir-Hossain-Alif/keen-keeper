@@ -1,5 +1,10 @@
 import Interactions from "@/components/Interactions";
 
+export const metadata = {
+    title: "Timeline",
+    description: "Timeline Page",
+};
+
 const TimelinePage = () => {
     return (
         <div className="max-w-6xl w-full mx-auto my-8 sm:my-12 md:my-16 lg:my-20 p-4">
