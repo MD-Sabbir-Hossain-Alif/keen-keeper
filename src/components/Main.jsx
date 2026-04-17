@@ -4,7 +4,7 @@ import FriendsCard from "./FriendsCard";
 import SummaryCards from "./SummaryCards";
 
 const Main = async () => {
-    const res = await fetch("https//:localhost.3000/friends-data.json", {
+    const res = await fetch("http://localhost:3000/friends-data.json", {
         cache: "no-store",
     });
     const data = await res.json();
