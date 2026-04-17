@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import CallIcon from "../assets/call.png";
 import TextIcon from "../assets/text.png";
 import VideoIcon from "../assets/video.png";
@@ -10,6 +10,14 @@ import { useMyContext } from "@/context/MyProvider";
 const Interactions = () => {
     const { interactions } = useMyContext();
     // console.log(interactions);
+
+    const [filter, setFilter] = useState("");
+
+    const filteredData = filter
+        ? interactions.filter((item) => item.action === filter)
+        : interactions;
+
+    // console.log(filteredData);
 
     return (
         <Suspense
@@ -25,19 +33,20 @@ const Interactions = () => {
             className="space-y-6"
         >
             <select
+                onChange={(e) => setFilter(e.target.value)}
                 defaultValue="Filter timeline"
                 className="select select-ghost bg-white border border-[#E9E9E9]"
             >
                 <option disabled={true} className="hidden">
                     Filter timeline
                 </option>
-                <option>Call</option>
-                <option>Text</option>
-                <option>Video</option>
+                <option value="Call">Call</option>
+                <option value="Text">Text</option>
+                <option value="Video">Video</option>
             </select>
 
             <ul className="list rounded-box gap-6">
-                {interactions.map((interaction, index) => (
+                {filteredData.map((interaction, index) => (
                     <li
                         key={index}
                         className="list-row items-center shadow-sm bg-white border border-[#E9E9E9]"
@@ -85,7 +94,7 @@ const Interactions = () => {
                     </li>
                 ))}
             </ul>
-            {!interactions.length && (
+            {!filteredData.length && (
                 <div className="bg-white border border-white shadow-sm p-4 sm:p-12 md:p-20 lg:p-30 text-center space-y-4 rounded-lg">
                     <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#244D3F]">
                         Timeline Not Available!
