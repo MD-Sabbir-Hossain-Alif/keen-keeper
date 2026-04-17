@@ -4,7 +4,9 @@ import FriendsCard from "./FriendsCard";
 import SummaryCards from "./SummaryCards";
 
 const Main = async () => {
-    const res = await fetch("http://localhost:3000/friends-data.json");
+    const res = await fetch(
+        "https://keen-keeper-git-main-sabbirs-projects-cd770bda.vercel.app/friends-data.json",
+    );
     const data = await res.json();
     // console.log(data);
     return (
