@@ -5,7 +5,7 @@ import SummaryCards from "./SummaryCards";
 
 const Main = async () => {
     const res = await fetch(
-        "https://keen-keeper-iota-nine.vercel.app//friends-data.json",
+        "https://keen-keeper-iota-nine.vercel.app/friends-data.json",
         {
             cache: "no-store",
         },

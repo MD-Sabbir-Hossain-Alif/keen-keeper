@@ -11,7 +11,7 @@ const DetailsPage = async ({ params }) => {
     const { id } = await params;
     // console.log(parseInt(id));
     const res = await fetch(
-        "https://keen-keeper-iota-nine.vercel.app//friends-data.json",
+        "https://keen-keeper-iota-nine.vercel.app/friends-data.json",
         {
             cache: "no-store",
         },
