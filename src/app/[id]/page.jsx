@@ -10,9 +10,12 @@ import { RiArchiveLine, RiDeleteBin6Line } from "react-icons/ri";
 const DetailsPage = async ({ params }) => {
     const { id } = await params;
     // console.log(parseInt(id));
-    const res = await fetch("http://localhost:3000/friends-data.json", {
-        cache: "no-store",
-    });
+    const res = await fetch(
+        "https://keen-keeper-iota-nine.vercel.app//friends-data.json",
+        {
+            cache: "no-store",
+        },
+    );
     const data = await res.json();
     // console.log(data);
 
