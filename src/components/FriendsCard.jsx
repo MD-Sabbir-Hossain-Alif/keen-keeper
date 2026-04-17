@@ -6,7 +6,10 @@ const FriendsCard = ({ card }) => {
     // console.log(card);
     const { id, name, picture, days_since_contact, status, tags } = card;
     return (
-        <Link href={`/${id}`} className="card bg-white shadow-sm p-6">
+        <Link
+            href={`/${id}`}
+            className="card bg-white shadow-sm p-6 hover:bg-gray-100 transition-all"
+        >
             <figure>
                 <div className="avatar">
                     <div className="w-20 rounded-full">

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { FaPlus } from "react-icons/fa";
 import FriendsCard from "./FriendsCard";
+import SummaryCards from "./SummaryCards";
 
 const Main = async () => {
     const res = await fetch("http://localhost:3000/friends-data.json");
@@ -24,56 +25,29 @@ const Main = async () => {
                         Add a Friend
                     </button>
                 </div>
+            </section>
+            <Suspense
+                fallback={
+                    <div className="flex justify-center items-center h-screen w-full">
+                        <span className="loading loading-ring loading-xl max-w-20 w-full "></span>
+                    </div>
+                }
+            >
                 {/* summary cards */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 my-10 text-center">
-                    <div className="p-4 sm:p-6 md-p-8 bg-white border border-white shadow">
-                        <h2 className="text-[#244D3F] text-2xl font-semibold sm:text-[2rem]">
-                            {data.length}
-                        </h2>
-                        <p className="text-[#64748B] text-base sm:text-lg">
-                            Total Friends
-                        </p>
+                <SummaryCards data={data} />
+                <hr className="mb-10 border-[#E9E9E9]" />
+                {/* friends card section */}
+                <section>
+                    <h3 className="text-2xl text-[#1F2937] font-semibold mb-4">
+                        Your Friend
+                    </h3>
+                    <div className="grid grid-cols-4 gap-6 mb-20">
+                        {data.map((card) => (
+                            <FriendsCard key={card.id} card={card} />
+                        ))}
                     </div>
-
-                    <div className="p-6 sm:p-8 bg-white border border-white shadow">
-                        <h2 className="text-[#244D3F] text-2xl font-semibold sm:text-[2rem]">
-                            0
-                        </h2>
-                        <p className="text-[#64748B] text-base sm:text-lg">
-                            On Track
-                        </p>
-                    </div>
-
-                    <div className="p-6 sm:p-8 bg-white border border-white shadow">
-                        <h2 className="text-[#244D3F] text-2xl font-semibold sm:text-[2rem]">
-                            0
-                        </h2>
-                        <p className="text-[#64748B] text-base sm:text-lg">
-                            Need Attention
-                        </p>
-                    </div>
-                    <div className="p-6 sm:p-8 bg-white border border-white shadow">
-                        <h2 className="text-[#244D3F] text-2xl font-semibold sm:text-[2rem]">
-                            0
-                        </h2>
-                        <p className="text-[#64748B] text-base sm:text-lg">
-                            Interactions This Month
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <hr className="mb-10 border-[#E9E9E9]" />
-            {/* friends card section */}
-            <section>
-                <h3 className="text-2xl text-[#1F2937] font-semibold mb-4">
-                    Your Friend
-                </h3>
-                <div className="grid grid-cols-4 gap-6 mb-20">
-                    {data.map((card) => (
-                        <FriendsCard key={card.id} card={card} />
-                    ))}
-                </div>
-            </section>
+                </section>
+            </Suspense>
         </main>
     );
 };
